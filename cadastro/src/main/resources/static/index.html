@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CRUD Simples - Pessoas & Usuários</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>CRUD Simples - Pessoas & Usuários</h1></header>
+  <main>
+    <nav>
+      <button id="tab-pessoas" class="active">Pessoas</button>
+      <button id="tab-usuarios">Usuários</button>
+    </nav>
+
+    <section id="pessoas-section" class="tab active">
+      <h2>Pessoas</h2>
+      <form id="pessoa-form">
+        <input type="hidden" id="pessoa-id" />
+        <label>Nome: <input id="pessoa-nome" required /></label>
+        <label>CPF: <input id="pessoa-cpf" /></label>
+        <label>Telefone: <input id="pessoa-telefone" /></label>
+        <button type="submit">Salvar</button>
+        <button type="button" id="pessoa-cancel">Cancelar</button>
+      </form>
+
+      <div class="search-row">
+        <input id="pessoa-search" placeholder="Buscar por nome..." />
+        <button id="pessoa-search-btn">Buscar</button>
+        <button id="pessoa-refresh">Atualizar</button>
+      </div>
+
+      <table id="pessoa-table">
+        <thead><tr><th>ID</th><th>Nome</th><th>CPF</th><th>Telefone</th><th>Ações</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="usuarios-section" class="tab">
+      <h2>Usuários</h2>
+      <form id="usuario-form">
+        <input type="hidden" id="usuario-id" />
+        <label>Usuário: <input id="usuario-nome" required /></label>
+        <label>Senha: <input id="usuario-senha" type="password" required /></label>
+        <button type="submit">Salvar</button>
+        <button type="button" id="usuario-cancel">Cancelar</button>
+      </form>
+
+      <div class="search-row">
+        <input id="usuario-search" placeholder="Buscar por nome..." />
+        <button id="usuario-search-btn">Buscar</button>
+        <button id="usuario-refresh">Atualizar</button>
+      </div>
+
+      <table id="usuario-table">
+        <thead><tr><th>ID</th><th>Usuário</th><th>Ações</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
